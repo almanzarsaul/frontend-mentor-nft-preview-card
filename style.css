@@ -56,15 +56,13 @@ body {
 
 .amount {
     color: var(--clr-primary-200);
-}
-
-.time-left {
     font-weight: var(--fw-bold);
 }
 
 .card__creator-section {
     display: inline-flex;
     gap: 1rem;
+    align-items: center;
 }
 
 .card__creator-avatar {
@@ -84,4 +82,60 @@ body {
 
 .card__creator-name:is(:hover, :focus), .card__title:is(:hover, :focus) {
     color: var(--clr-primary-200);
+}
+
+.amount, .time-left {
+    display: inline-flex;
+    gap: 0.438rem;
+    align-items: center;
+}
+
+
+
+/* Image overlay */
+/* Credit: https://www.w3schools.com/howto/howto_css_image_overlay.asp */
+
+.container {
+    position: relative;
+    cursor: pointer;
+}
+  
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+}
+  
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: var(--clr-primary-200);
+    border-radius: 0.5rem;
+}
+  
+.container:hover .overlay {
+    opacity: .5;
+}
+
+.container:hover .eye {
+    opacity: 1;
+}
+
+.eye {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    transition: .5s ease;
+    opacity: 0;
 }
