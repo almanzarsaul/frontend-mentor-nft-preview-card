@@ -18,7 +18,7 @@ body {
     background-color: var(--clr-neutral-800);
     font-family: var(--ff-primary);
     display: grid;
-    align-items: center;
+    place-items: center;
 }
 
 .card {
@@ -30,6 +30,7 @@ body {
     gap: 1rem;
     font-weight: var(--fw-regular);
     color: var(--clr-primary-400);
+    max-width: 21.875rem;
 }
 
 .card__image {
