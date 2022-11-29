@@ -92,8 +92,10 @@ body {
     align-items: center;
 }
 
-hr {
-    color: var(--clr-neutral-600);
+.line-break {
+    height: 2px;
+    width: 100%;
+    background-color: var(--clr-neutral-600);
 }
 
 
